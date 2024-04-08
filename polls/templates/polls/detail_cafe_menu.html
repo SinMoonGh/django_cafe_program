@@ -1,5 +1,17 @@
+{% extends 'base.html' %}
+
 <h1>Coffee menu</h1>
 
-{% for won in cafe_detail_obj.menucategory_set.all %}
-<h2><a href="">{{ won.menu_name }}</a></h2>
-{% endfor %}
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Featured
+    </div>
+    <ul class="list-group list-group-flush">
+        {% for won in cafe_detail_obj.menucategory_set.all %}
+        <li class="list-group-item"><a href="">{{ won.menu_name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

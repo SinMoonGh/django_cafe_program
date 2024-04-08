@@ -1,6 +1,26 @@
-{{ '고객님의 전화번호를 입력해주세요 : '}}
-<h1>Cafe menu</h1>
+{% extends 'base.html' %}
+
+<h1>{% block title %}Cafe menu{% endblock %}</h1>
+
+{% block style %}
+<style type="text/css">
+    .menu_list {
+        font-size: 30px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
 
 {% for won in menu_LV_obj %}
-<h2><a href="{% url 'polls:detail_menu' won.id %}">{{ won.menu }}</a></h2>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <a class="card-title menu_list" href="{% url 'polls:detail_menu' won.id %}">{{ won.menu }}</a>
+        <h6 class="card-subtitle mb-2 text-muted">Lion Cafe</h6>
+        <p class="card-text">맛 좋은 커피 Lion coffee</p>
+        <a href="{% url 'polls:detail_menu' won.id %}" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>
 {% endfor %}
+{% endblock %}
