@@ -23,4 +23,6 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path("polls/", include("polls.urls")),
+    path("description/", include("description.urls")),
+
 ]
