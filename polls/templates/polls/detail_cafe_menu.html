@@ -1,0 +1,5 @@
+<h1>Coffee menu</h1>
+
+{% for won in cafe_detail_obj.menucategory_set.all %}
+<h2><a href="">{{ won.menu_name }}</a></h2>
+{% endfor %}

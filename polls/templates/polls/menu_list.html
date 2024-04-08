@@ -1,0 +1,6 @@
+{{ '고객님의 전화번호를 입력해주세요 : '}}
+<h1>Cafe menu</h1>
+
+{% for won in menu_LV_obj %}
+<h2><a href="{% url 'polls:detail_menu' won.id %}">{{ won.menu }}</a></h2>
+{% endfor %}

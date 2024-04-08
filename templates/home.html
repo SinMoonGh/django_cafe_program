@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<title>{% block title %}Home{% endblock %}</title>
+
+
+{% block style %}
+<style type="text/css">
+    .home-image {
+        background-image: url("{% static 'img/lion.jpg' %}");
+        background-size: 100%;
+        height: 500px;
+        border-top: 10px solid #ccc;
+        border-bottom: 10 solid #ccc;
+        padding: 20px 0 0 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .title {
+        color: #c80;
+        font-weight: bold;
+    }
+
+    .power {
+        position: relative;
+        color: #cc0;
+        font-weight: bolder;
+        top: 77%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="home-image">
+    <h2 class="title">Lion Cafe는 사랑입니다</h2>
+    <h4 class="power"><i class="fas fa-arrow-circle-right"></i>매장에 아기사자도 있습니다^^</h4>
+</div>
+{% endblock content %}
